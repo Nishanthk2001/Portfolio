@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishanth Kumar - Portfolio</title>
+    <!-- Use Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use the 'Dancing Script' for the initials and 'Inter' for everything else -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:ital,wght@1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        /* This fixes the body background to be jet black */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #f7f7f7;
+            line-height: 1.6;
+            font-style: italic; /* Apply italic font style for body text */
+        }
+        /* Style for the signature name to make it look like a real signature */
+        .font-signature-initial {
+            font-family: 'Dancing Script', cursive;
+            font-weight: 700; /* Bold for prominence */
+            font-size: 10rem; /* Slightly reduced size for the initials */
+            line-height: 1; /* Adjust line height to prevent spacing issues */
+            font-style: normal; /* Cursive font shouldn't be italicized */
+        }
+        .font-signature-rest {
+            font-family: 'Dancing Script', cursive;
+            font-weight: 700;
+            font-size: 5rem; /* Slightly reduced size for the rest of the name */
+            line-height: 1;
+            font-style: normal;
+        }
+        /* Custom background color for sections to add depth, slightly off-black */
+        .bg-section-dark {
+            background-color: #1a1a1a;
+        }
+        .project-item {
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+            border: 2px solid #333;
+        }
+        .project-item:hover, .project-item.active {
+            background-color: #2c2c2c;
+            border-color: #fff;
+            transform: scale(1.05);
+        }
+        .project-image {
+            transition: opacity 0.3s ease-in-out;
+            max-height: 600px; /* Made image bigger */
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-100">
+
+    <!-- Hero Section -->
+    <section class="relative bg-section-dark py-12 md:py-24 overflow-hidden rounded-b-3xl shadow-lg transition-colors duration-500">
+        <div class="relative z-10 container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between">
+            <div class="text-center md:text-left md:w-1/2">
+                <h1 id="animated-name" class="tracking-tight leading-none mb-4 text-white"></h1>
+                <p class="text-lg md:text-xl font-medium text-gray-400 mb-8">MSc Business Analytics Graduate</p>
+                <div class="space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row items-center justify-center md:justify-start">
+                    <a href="#projects" class="w-full md:w-auto px-8 py-3 rounded-full text-black bg-white font-medium hover:bg-gray-200 transition duration-300 transform hover:scale-105">View Projects</a>
+                    <a href="#contact" class="w-full md:w-auto px-8 py-3 rounded-full text-white bg-transparent border border-white hover:bg-white hover:text-black transition duration-300 transform hover:scale-105">Contact Me</a>
+                </div>
+            </div>
+            <div class="mt-12 md:mt-0 md:w-1/2 flex justify-center md:justify-end">
+                <img src="main.png" alt="Nishanth Kumar - Stoic Marble Pose" class="rounded-3xl shadow-2xl transform hover:scale-105 transition duration-500 w-full max-w-sm md:max-w-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto px-6 md:px-12 py-16 md:py-24">
+        <div class="bg-section-dark p-8 md:p-12 rounded-3xl shadow-lg transition-colors duration-500">
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-4xl font-bold mb-4 text-white">About Me</h2>
+                    <p class="text-gray-400 mb-6">Highly motivated MSc Business Analytics graduate with a strong foundation in data analysis, statistical modeling, and machine learning. Passionate about applying data-driven strategies to optimize business performance and solve complex challenges. Seeking to contribute to a forward-thinking organization and grow as a data professional.</p>
+                    <p class="text-sm text-gray-500">Contact: nishanthkumar665@gmail.com | +91 91085 98625</p>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="hands cross.png" alt="Nishanth Kumar - Side profile marble pose" class="w-full max-w-sm rounded-3xl shadow-xl transform hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container mx-auto px-6 md:px-12 py-16 md:py-24">
+        <div class="bg-black text-white p-8 md:p-12 rounded-3xl shadow-lg transition-colors duration-500">
+            <h2 class="text-4xl font-bold text-center mb-10 text-white">Technical Expertise</h2>
+            <div class="flex items-center justify-center mb-8">
+                <img src="hands at hip.png" alt="Nishanth Kumar - Marble pose with hands at hip" class="rounded-2xl shadow-xl max-w-xs md:max-w-sm">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-section-dark p-6 rounded-2xl shadow-inner transition-colors duration-300 hover:bg-gray-800">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-200">Programming Languages</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-400">
+                        <li>Python</li>
+                        <li>R</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="bg-section-dark p-6 rounded-2xl shadow-inner transition-colors duration-300 hover:bg-gray-800">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-200">Tools & Platforms</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-400">
+                        <li>Power BI</li>
+                        <li>Tableau</li>
+                        <li>MS Excel, SPSS, Stata</li>
+                        <li>MySQL, Visual Studio Code</li>
+                        <li>Jupyter Notebook, KNIME</li>
+                    </ul>
+                </div>
+                <div class="bg-section-dark p-6 rounded-2xl shadow-inner transition-colors duration-300 hover:bg-gray-800">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-200">Data Analysis</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-400">
+                        <li>Statistical modeling</li>
+                        <li>Regression, EDA, data cleaning</li>
+                        <li>Feature engineering, visualization</li>
+                    </ul>
+                </div>
+                <div class="bg-section-dark p-6 rounded-2xl shadow-inner transition-colors duration-300 hover:bg-gray-800">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-200">Machine Learning</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-400">
+                        <li>Supervised & unsupervised learning</li>
+                        <li>Decision trees, k-means clustering</li>
+                        <li>Neural networks</li>
+                    </ul>
+                </div>
+                <div class="bg-section-dark p-6 rounded-2xl shadow-inner transition-colors duration-300 hover:bg-gray-800">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-200">Certifications</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-400">
+                        <li>Machine Learning Specialization: Stanford University</li>
+                        <li>Google Business Intelligence Specialization</li>
+                        <li>Excel Skills for Business (Advanced)</li>
+                        <li>Visualizing Research Data in Tableau</li>
+                    </ul>
+                </div>
+                <div class="bg-section-dark p-6 rounded-2xl shadow-inner transition-colors duration-300 hover:bg-gray-800">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-200">Soft Skills</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-400">
+                        <li>Problem-solving, critical thinking</li>
+                        <li>Adaptability, teamwork</li>
+                        <li>Decision-making</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with new design -->
+    <section id="projects" class="container mx-auto px-6 md:px-12 py-16 md:py-24">
+        <h2 class="text-4xl font-bold text-center mb-10 text-white">Selected Projects</h2>
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Project List -->
+            <div class="md:w-1/2 bg-section-dark rounded-2xl shadow-lg p-8">
+                <ul class="space-y-4">
+                    <li class="project-item p-4 rounded-xl active" data-image="showcaseproj.png" data-link="https://nishanthk2001.github.io/Maternal-Health-Risk-Prediction-Analysis/">
+                        <h3 class="font-semibold text-lg text-white">Maternal Health Risk Prediction</h3>
+                        <p class="text-gray-400 text-sm">A highly accurate ML model for risk assessment.</p>
+                    </li>
+                    <li class="project-item p-4 rounded-xl" data-image="sitting posture.png" data-link="sitting_posture_link">
+                        <h3 class="font-semibold text-lg text-white">Dynamic Interconnections</h3>
+                        <p class="text-gray-400 text-sm">Volatility and correlation analysis of commodities.</p>
+                    </li>
+                    <li class="project-item p-4 rounded-xl" data-image="hands under chin.png" data-link="hands_under_chin_link">
+                        <h3 class="font-semibold text-lg text-white">MAHE Ranking Dashboard</h3>
+                        <p class="text-gray-400 text-sm">Interactive Power BI dashboard for university rankings.</p>
+                    </li>
+                    <li class="project-item p-4 rounded-xl" data-image="hands at hip.png" data-link="hands_at_hip_link">
+                        <h3 class="font-semibold text-lg text-white">Project 4</h3>
+                        <p class="text-gray-400 text-sm">Description of Project 4.</p>
+                    </li>
+                    <li class="project-item p-4 rounded-xl" data-image="hands cross.png" data-link="hands_cross_link">
+                        <h3 class="font-semibold text-lg text-white">Project 5</h3>
+                        <p class="text-gray-400 text-sm">Description of Project 5.</p>
+                    </li>
+                    <li class="project-item p-4 rounded-xl" data-image="main.png" data-link="main_link">
+                        <h3 class="font-semibold text-lg text-white">Project 6</h3>
+                        <p class="text-gray-400 text-sm">Description of Project 6.</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- Project Showcase Image -->
+            <div class="md:w-1/2 flex justify-center items-center bg-section-dark rounded-2xl shadow-lg p-8">
+                <img id="project-showcase" src="showcaseproj.png" alt="Project Showcase" class="project-image w-full rounded-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-black text-white py-16 md:py-24 rounded-t-3xl shadow-lg transition-colors duration-500">
+        <div class="container mx-auto px-6 md:px-12 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-white">Get in Touch</h2>
+            <div class="flex justify-center mb-8">
+                <img src="sitting posture.png" alt="Nishanth Kumar - Sitting Pose" class="rounded-2xl shadow-xl max-w-xs md:max-w-sm">
+            </div>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">I'm currently seeking new opportunities and would love to discuss how my skills in data analytics can benefit your organization. Feel free to reach out to me.</p>
+            <a href="mailto:nishanthkumar665@gmail.com" class="px-8 py-3 rounded-full text-black bg-white font-medium hover:bg-gray-200 transition-all duration-300 transform hover:scale-105">Email Me</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-6 text-center rounded-t-lg transition-colors duration-500">
+        <p>&copy; 2025 Nishanth Kumar. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for the typing animation and project showcase -->
+    <script>
+        window.onload = function() {
+            // Typing animation for the name
+            const nameElement = document.getElementById('animated-name');
+            const name = "Nishanth Kumar";
+            let i = 0;
+            const speed = 100;
+
+            function typeWriter() {
+                if (i < name.length) {
+                    const char = name.charAt(i);
+                    if (i === 0) {
+                        nameElement.innerHTML += `<span class="font-signature-initial">${char}</span>`;
+                    } else if (i === 9) {
+                        nameElement.innerHTML += `<span class="font-signature-initial">${char}</span>`;
+                    } else {
+                        nameElement.innerHTML += `<span class="font-signature-rest">${char}</span>`;
+                    }
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+            typeWriter();
+
+            // Project showcase functionality
+            const projectItems = document.querySelectorAll('.project-item');
+            const projectShowcase = document.getElementById('project-showcase');
+
+            projectItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    // Remove 'active' class from all items
+                    projectItems.forEach(i => i.classList.remove('active'));
+
+                    // Add 'active' class to the clicked item
+                    item.classList.add('active');
+
+                    // Get the image source from the data attribute
+                    const newImageSrc = item.getAttribute('data-image');
+                    const newLink = item.getAttribute('data-link');
+
+                    // Fade out the current image
+                    projectShowcase.style.opacity = '0';
+
+                    // Change image and fade it back in after a short delay
+                    setTimeout(() => {
+                        projectShowcase.src = newImageSrc;
+                        projectShowcase.style.opacity = '1';
+                    }, 300);
+
+                    // Open the link if a valid one is present (for demonstration)
+                    if (newLink && newLink !== 'hands_at_hip_link' && newLink !== 'sitting_posture_link' && newLink !== 'hands_under_chin_link' && newLink !== 'main_link' && newLink !== 'hands_cross_link') {
+                        window.open(newLink, '_blank');
+                    }
+                });
+            });
+        };
+    </script>
+</body>
+</html>
